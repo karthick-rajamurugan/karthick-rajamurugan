@@ -1,11 +1,45 @@
 "use client";
 import { CardStack } from "./components/ui/card-stack";
 import { BackgroundBeamsWithCollision } from "./components/ui/background-beams-with-collision";
+import { Button } from "./components/ui/moving-border";
+import confetti from "canvas-confetti";
+var duration = 15 * 1000;
+  var animationEnd = Date.now() + duration;
+  var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
 
-import { cn } from "./lib/utils";
+  function randomInRange(min: number, max: number) {
+    return Math.random() * (max - min) + min;
+  }
+
+  const handleConfetti = () => {
+    var interval = setInterval(function () {
+      var timeLeft = animationEnd - Date.now();
+
+      if (timeLeft <= 0) {
+        return clearInterval(interval);
+      }
+
+      var particleCount = 50 * (timeLeft / duration);
+      // since particles fall down, start a bit higher than random
+      confetti(
+        Object.assign({}, defaults, {
+          particleCount,
+          origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }
+        })
+      );
+      confetti(
+        Object.assign({}, defaults, {
+          particleCount,
+          origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }
+        })
+      );
+    }, 250);
+  };
+
+
 export default function CardStackDemo() {
   return (
-    <BackgroundBeamsWithCollision>
+    <BackgroundBeamsWithCollision className="flex flex-col items-center justify-center h-screen">
     <h2 className="text-2xl relative z-20 md:text-4xl lg:text-7xl font-bold text-center text-black dark:text-white font-sans tracking-tight">
     Cauvery College for Women{" "}
       <div className="relative mx-auto inline-block w-max [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
@@ -17,9 +51,17 @@ export default function CardStackDemo() {
         </div>
       </div>
     </h2>
+   
     <div className="h-[40rem] flex items-center justify-center w-full">
       <CardStack items={CARDS} />
     </div>
+    <Button
+        borderRadius="1.75rem"
+        className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800"
+        onClick={handleConfetti} auto
+      >
+        Click me !!
+      </Button>
   </BackgroundBeamsWithCollision>
     
   );

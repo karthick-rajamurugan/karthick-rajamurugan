@@ -25,25 +25,6 @@ export default function CardStackDemo() {
   );
 }
 
-// Small utility to highlight the content of specific section of a testimonial content
-export const Highlight = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
-  return (
-    <span
-      className={cn(
-        "font-bold bg-emerald-100 text-emerald-700 dark:bg-emerald-700/[0.2] dark:text-emerald-500 px-1 py-0.5",
-        className
-      )}
-    >
-      {children}
-    </span>
-  );
-};
 
 const CARDS = [
   {
@@ -51,9 +32,7 @@ const CARDS = [
     name: "Aaron Bacal",
     designation: "American cartoonist",
     content: (
-      <p>
-        Your heart is slightly larger than the average human heart, but that's because you're a teacher. 🙏
-      </p>
+      <p>Your heart is slightly larger than the average human heart, but that is because you are a teacher.</p>
     ),
   },
   {

@@ -72,30 +72,19 @@ export default function CardStackDemo() {
 const CARDS = [
   {
     id: 0,
-    name: "Aaron Bacal",
-    designation: "American cartoonist",
+    name: " With  love,",
+    designation: "  Students XOXO 📚💖",
     content: (
-      <p>Your heart is slightly larger than the average human heart, but that is because you are a teacher.</p>
+      <p>Dear Teachers, We just wanted to send a little love your way and say how thankful we are for all of you. You’ve been like a second family to us — always there with a smile, a kind word, and the patience of saints! From making learning feel like a fun journey to always believing in us, you’ve filled our days with so much warmth and joy. 💖🌹🎓Thank you for being the heart and soul of our learning experience. We're so lucky to have you all in our life! 🙏💕</p>
     ),
   },
   {
     id: 1,
-    name: "Sidney Hook",
-    designation: "American philosopher",
+    name: " அன்புடன், ",
+    designation: "காவேரி கல்லூரி மாணவிகள்.🌼",
     content: (
-      <p>
-        Everyone who remembers his own education remembers teachers, not methods and techniques. The teacher is the heart of the educational system.
-      </p>
+      <p>அன்பு ஆசிரியர்களே,  இது உங்களுக்கான ஒரு அன்பு கடிதம், எங்கள் நெஞ்சில் நிறைந்த நன்றியின் ஒரு சிறு துளி! 💖 உங்களுடன் இருந்த ஒவ்வொரு நாளும் எங்களுக்கு ஒரு அற்புதமான அனுபவம் - பாடங்களை பாடல்களாக மாற்றி, கற்றலின் வழியே மகிழ்ச்சி வீச வைத்தீர்கள். 📚✨  நீங்கள் எங்கள் கனவுகளுக்கு நிறம் தீட்டினீர்கள், எங்களுடைய சிறந்தவைகளை வெளிக்காட்ட உதவினீர்கள். 🙏 உங்களால் தான் இன்று நாங்கள் நன்றாக இருக்கிறோம்.நன்றி,</p>
     ),
   },
-  {
-    id: 2,
-    name: "Michael Morpurgo",
-    designation: "English author",
-    content: (
-      <p>
-        It is the teacher that makes the difference. Not the classroom
-      </p>
-    ),
-  },
+  
 ];
